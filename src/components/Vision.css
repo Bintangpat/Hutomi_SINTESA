@@ -1,0 +1,59 @@
+.vision {
+  background: var(--white);
+}
+
+.vision-statement {
+  margin: 32px 0 0;
+  max-width: 760px;
+  font-size: clamp(19px, 2.4vw, 25px);
+  line-height: 1.6;
+  color: var(--ink);
+  font-weight: 500;
+  padding-left: 22px;
+  border-left: 3px solid var(--red);
+}
+
+.vision-statement strong {
+  color: var(--red-dark);
+  font-weight: 700;
+}
+
+.pillar-grid {
+  margin-top: 52px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pillar-card {
+  padding: 32px 28px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.pillar-card:hover {
+  border-color: var(--red);
+  transform: translateY(-4px);
+}
+
+.pillar-icon {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  color: var(--red);
+}
+
+.pillar-title {
+  margin-top: 22px;
+  font-size: 22px;
+}
+
+.pillar-desc {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.75;
+}
+
+@media (max-width: 860px) {
+  .pillar-grid { grid-template-columns: 1fr; }
+}
