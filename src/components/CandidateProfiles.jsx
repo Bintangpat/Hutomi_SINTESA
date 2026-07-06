@@ -1,30 +1,38 @@
-import Reveal from './Reveal.jsx'
-import './CandidateProfiles.css'
+import Reveal from "./Reveal.jsx";
+import "./CandidateProfiles.css";
 
 const CANDIDATES = [
   {
-    num: '01',
-    role: 'Calon Presiden BEM',
-    name: 'Husein Fadhilah',
-    tone: 'navy',
-    desc: 'S1 Akuntansi · Angkatan 2023. Dikenal dengan gaya kepemimpinan yang reflektif namun tegas — lebih senang mendengarkan akar rumput dahulu sebelum mengambil sikap, dan konsisten menolak kompromi pada nilai.',
-    quote: 'Kita tidak sedang membangun organisasi untuk merawat rutinitas, kita sedang mewariskan peradaban pergerakan yang menolak tunduk pada keadaan.',
+    num: "01",
+    role: "Calon Presiden BEM",
+    name: "Husein Fadhilah",
+    tone: "navy",
+    imgsrc: "/WhatsApp Image 2026-07-05 at 19.05.12.jpeg",
+    desc: "S1 Akuntansi · Angkatan 2023. Dikenal dengan gaya kepemimpinan yang reflektif namun tegas — lebih senang mendengarkan akar rumput dahulu sebelum mengambil sikap, dan konsisten menolak kompromi pada nilai.",
+    quote:
+      "Kita tidak sedang membangun organisasi untuk merawat rutinitas, kita sedang mewariskan peradaban pergerakan yang menolak tunduk pada keadaan.",
     tracks: [
-      'Ketua Satgas Anti-Narkoba UAP (2023-2024)',
-      'Mahasiswa Berprestasi Utama UAP & Finalis PILMAPRES 2025',
-      'Verified Writer IDN Times (500+ Artikel Terpublikasi)'
+      "Ketua Satgas Anti-Narkoba UAP (2023-2024)",
+      "Mahasiswa Berprestasi Utama UAP & Finalis PILMAPRES 2025",
+      "Verified Writer IDN Times (500+ Artikel Terpublikasi)",
     ],
   },
   {
-    num: '02',
-    role: 'Calon Wakil Presiden BEM',
-    name: 'Tomi Syahirza',
-    tone: 'red',
-    desc: '[Fakultas / Jurusan] · Angkatan [____]. Melengkapi Husein dari sisi eksekusi — fokus pada tata kelola internal, manajemen program, dan memastikan setiap gagasan besar benar-benar berjalan di lapangan.',
-    quote: 'Gagasan sebesar apa pun akan berhenti jadi wacana kalau tata kelolanya rapuh — tugas kami adalah memastikan setiap janji punya jalan untuk ditepati.',
-    tracks: ['Lengkapi riwayat organisasi', 'Lengkapi pencapaian akademik/organisasi', 'Lengkapi pengalaman manajerial'],
+    num: "02",
+    role: "Calon Wakil Presiden BEM",
+    name: "Tomi Syahirza",
+    tone: "red",
+    imgsrc: "/WhatsApp Image 2026-07-05 at 19.05.35.jpeg",
+    desc: "[Fakultas / Jurusan] · Angkatan [____]. Melengkapi Husein dari sisi eksekusi — fokus pada tata kelola internal, manajemen program, dan memastikan setiap gagasan besar benar-benar berjalan di lapangan.",
+    quote:
+      "Gagasan sebesar apa pun akan berhenti jadi wacana kalau tata kelolanya rapuh — tugas kami adalah memastikan setiap janji punya jalan untuk ditepati.",
+    tracks: [
+      "Lengkapi riwayat organisasi",
+      "Lengkapi pencapaian akademik/organisasi",
+      "Lengkapi pengalaman manajerial",
+    ],
   },
-]
+];
 
 export default function CandidateProfiles({ onViewProfile }) {
   return (
@@ -36,7 +44,8 @@ export default function CandidateProfiles({ onViewProfile }) {
             Profil <span className="accent">Kandidat</span>
           </h2>
           <p className="section-sub on-dark">
-            Dua karakter yang saling melengkapi — satu menyalakan arah, satu memastikan arah itu berjalan.
+            Dua karakter yang saling melengkapi — satu menyalakan arah, satu
+            memastikan arah itu berjalan.
           </p>
         </Reveal>
 
@@ -45,16 +54,12 @@ export default function CandidateProfiles({ onViewProfile }) {
             <Reveal
               as="article"
               key={c.name}
-              variant={idx === 0 ? 'left' : 'right'}
+              variant={idx === 0 ? "left" : "right"}
               delay={0.1}
               className={`profile-card tone-${c.tone}`}
             >
               <div className="profile-visual">
-                <svg viewBox="0 0 200 200" className="profile-svg" role="img" aria-label={`Ilustrasi ${c.name}`}>
-                  <circle cx="100" cy="100" r="92" fill="currentColor" opacity="0.14" />
-                  <circle cx="100" cy="86" r="34" fill="currentColor" opacity="0.9" />
-                  <path d="M40 172 Q100 108 160 172 Z" fill="currentColor" opacity="0.9" />
-                </svg>
+                <img src={c.imgsrc}></img>
                 <span className="profile-num">{c.num}</span>
               </div>
 
@@ -68,14 +73,12 @@ export default function CandidateProfiles({ onViewProfile }) {
                 ))}
               </ul>
 
-              <blockquote className="profile-quote">
-                “{c.quote}”
-              </blockquote>
+              <blockquote className="profile-quote">“{c.quote}”</blockquote>
 
-              {c.num === '01' ? (
+              {c.num === "01" ? (
                 <button
                   className="btn btn-outline on-dark profile-btn"
-                  onClick={() => onViewProfile && onViewProfile('husein')}
+                  onClick={() => onViewProfile && onViewProfile("husein")}
                 >
                   Lihat Profil Lengkap <span className="btn-icon">→</span>
                 </button>
@@ -93,6 +96,5 @@ export default function CandidateProfiles({ onViewProfile }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

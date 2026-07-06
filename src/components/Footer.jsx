@@ -1,11 +1,11 @@
-import './Footer.css'
+import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <section className="footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <span className="brand-mark">HT</span>
+          <span className="brand-mark">02</span>
           <div>
             <strong>Husein &amp; Tomi</strong>
             <span>BEM UAP · 2026</span>
@@ -23,9 +23,18 @@ export default function Footer() {
         <div className="footer-social">
           <span className="footer-label">Ikuti Gerakan</span>
           <div className="footer-social-links">
-            <a href="#" aria-label="Instagram">Instagram</a>
-            <a href="#" aria-label="TikTok">TikTok</a>
-            <a href="#" aria-label="Kontak tim sukses">Kontak Tim Sukses</a>
+            <a
+              href="https://www.instagram.com/hutomi_sintesa"
+              aria-label="Instagram"
+            >
+              Instagram
+            </a>
+            <a href="#" aria-label="TikTok">
+              TikTok
+            </a>
+            <a href="#" aria-label="Kontak tim sukses">
+              Kontak Tim Sukses
+            </a>
           </div>
         </div>
       </div>
@@ -34,6 +43,6 @@ export default function Footer() {
         <span>© 2026 Tim Pemenangan Husein &amp; Tomi — BEM UAP.</span>
         <span>Paradigma Baru, Praksis Pergerakan.</span>
       </div>
-    </footer>
-  )
+    </section>
+  );
 }
