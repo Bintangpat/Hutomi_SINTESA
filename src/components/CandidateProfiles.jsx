@@ -1,11 +1,14 @@
 import Reveal from "./Reveal.jsx";
 import "./CandidateProfiles.css";
+import { link } from "framer-motion/m";
 
 const CANDIDATES = [
   {
+    num: "01",
     role: "Calon Presiden BEM",
     name: "Husein Fadhilah",
     tone: "navy",
+    navigator: "/profile/husein",
     imgsrc: "/WhatsApp Image 2026-07-05 at 19.05.12.jpeg",
     desc: "S1 Akuntansi · Angkatan 2023. Dikenal dengan gaya kepemimpinan yang reflektif namun tegas — lebih senang mendengarkan akar rumput dahulu sebelum mengambil sikap, dan konsisten menolak kompromi pada nilai.",
     quote:
@@ -18,8 +21,10 @@ const CANDIDATES = [
     ],
   },
   {
+    num: "02",
     role: "Calon Wakil Presiden BEM",
     name: "Tomi Syahirza",
+    navigator: "/profile/tomi",
     tone: "red",
     imgsrc: "/WhatsApp Image 2026-07-05 at 19.05.35.jpeg",
     desc: "S1 Farmasi · Universitas Aisyah Pringsewu. Sosok eksekutor yang tegas — Ketua Umum Himpunan Mahasiswa Farmasi, Koordinator FKPMB, dan pengawal proses demokrasi kampus yang berpengalaman.",
