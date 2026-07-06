@@ -1,0 +1,290 @@
+/* ============================================================
+   NomorUrut.css — BEM UAP 2026
+   Section: Nomor Urut 02 · SINTESA
+   ============================================================ */
+
+.nomor-urut {
+    background: var(--navy);
+    overflow: hidden;
+    position: relative;
+}
+
+/* ---- Giant ghost number background ---- */
+.nomor-bg-num {
+    position: absolute;
+    right: -4%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-display);
+    font-size: clamp(260px, 32vw, 480px);
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.025);
+    letter-spacing: -0.04em;
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ---- Layout ---- */
+.nomor-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: clamp(40px, 8vw, 120px);
+    align-items: center;
+}
+
+/* ---- Left Column: Number Display ---- */
+.nomor-display-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.nomor-display-col .nomor-eyebrow {
+    margin-bottom: 32px;
+}
+
+.nomor-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    line-height: 1;
+}
+
+.nomor-label {
+    font-family: var(--font-mono);
+    font-size: clamp(18px, 2.4vw, 28px);
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-bottom: 16px;
+}
+
+.nomor-value {
+    font-family: var(--font-display);
+    font-size: clamp(120px, 18vw, 220px);
+    color: var(--white);
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+    padding: 4px;
+    /* Red underline accent */
+    background: linear-gradient(
+        180deg,
+        var(--white) 0%,
+        var(--white) 10%,
+        var(--red) 85%,
+        var(--red) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nomor-divider {
+    width: 64px;
+    height: 3px;
+    background: var(--red);
+    margin: 32px 0 20px;
+}
+
+.nomor-caption {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.8;
+}
+
+/* ---- Right Column: Brand ---- */
+.nomor-brand-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.nomor-brand-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: var(--red);
+    border-radius: 50%;
+    margin-bottom: 24px;
+    box-shadow:
+        0 0 0 8px rgba(226, 36, 27, 0.12),
+        0 0 0 16px rgba(226, 36, 27, 0.05);
+}
+
+.brand-badge-num {
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: 0.02em;
+}
+
+.nomor-brand-name {
+    font-family: var(--font-display);
+    font-size: clamp(52px, 8vw, 100px);
+    color: var(--white);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 40px rgba(226, 36, 27, 0.2);
+}
+
+/* Highlight first letter */
+.nomor-brand-name::first-letter {
+    color: var(--red);
+}
+
+.nomor-brand-tagline {
+    font-family: var(--font-body);
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 20px;
+}
+
+.nomor-brand-tagline em {
+    font-style: italic;
+}
+
+.nomor-brand-desc {
+    font-size: clamp(14px, 1.5vw, 16.5px);
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.75;
+    max-width: 52ch;
+    margin-bottom: 36px;
+}
+
+.nomor-brand-desc strong {
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* ---- CTA Buttons ---- */
+.nomor-cta-pair {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+
+/* ---- Candidate Strip ---- */
+.nomor-candidates-strip {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 32px;
+    border-top: 1px solid var(--line-on-navy);
+    width: 100%;
+}
+
+.candidate-chip {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--navy-2);
+    border: 1px solid var(--line-on-navy);
+    border-radius: 6px;
+    padding: 14px 18px;
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.candidate-chip:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.chip-num {
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.35);
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.chip-num-red {
+    color: var(--red);
+}
+
+.chip-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.chip-name {
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--white);
+    letter-spacing: 0.01em;
+}
+
+.chip-role {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.chip-connector {
+    font-family: var(--font-display);
+    font-size: 20px;
+    color: var(--red);
+    flex-shrink: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+    .nomor-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .nomor-display-col {
+        align-items: center;
+        text-align: center;
+    }
+
+    .nomor-value {
+        font-size: clamp(96px, 28vw, 160px);
+    }
+
+    .nomor-divider {
+        margin: 28px auto 16px;
+    }
+
+    .nomor-brand-col {
+        align-items: center;
+        text-align: center;
+    }
+
+    .nomor-brand-desc {
+        text-align: center;
+    }
+
+    .nomor-cta-pair {
+        justify-content: center;
+    }
+
+    .nomor-candidates-strip {
+        justify-content: center;
+    }
+
+    .nomor-bg-num {
+        right: 50%;
+        transform: translate(50%, -50%);
+        opacity: 0.5;
+    }
+}

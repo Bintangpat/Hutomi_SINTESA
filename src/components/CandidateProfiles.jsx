@@ -3,7 +3,6 @@ import "./CandidateProfiles.css";
 
 const CANDIDATES = [
   {
-    num: "01",
     role: "Calon Presiden BEM",
     name: "Husein Fadhilah",
     tone: "navy",
@@ -19,18 +18,17 @@ const CANDIDATES = [
     ],
   },
   {
-    num: "02",
     role: "Calon Wakil Presiden BEM",
     name: "Tomi Syahirza",
     tone: "red",
     imgsrc: "/WhatsApp Image 2026-07-05 at 19.05.35.jpeg",
-    desc: 'S1 Farmasi · Universitas Aisyah Pringsewu. Sosok eksekutor yang tegas — Ketua Umum Himpunan Mahasiswa Farmasi, Koordinator FKPMB, dan pengawal proses demokrasi kampus yang berpengalaman.',
+    desc: "S1 Farmasi · Universitas Aisyah Pringsewu. Sosok eksekutor yang tegas — Ketua Umum Himpunan Mahasiswa Farmasi, Koordinator FKPMB, dan pengawal proses demokrasi kampus yang berpengalaman.",
     quote:
       "Gagasan sebesar apa pun akan berhenti jadi wacana kalau tata kelolanya rapuh — tugas kami adalah memastikan setiap janji punya jalan untuk ditepati.",
     tracks: [
-      'Ketua Umum Himpunan Mahasiswa Farmasi (Himafa)',
-      'Ketua Divisi Edukasi UKM Satgas Narkoba UAP',
-      'Sekretaris Bawaslu Mahasiswa Pemilu BEM UAP',
+      "Ketua Umum Himpunan Mahasiswa Farmasi (Himafa)",
+      "Ketua Divisi Edukasi UKM Satgas Narkoba UAP",
+      "Sekretaris Bawaslu Mahasiswa Pemilu BEM UAP",
     ],
   },
 ];
@@ -61,7 +59,6 @@ export default function CandidateProfiles({ onViewProfile }) {
             >
               <div className="profile-visual">
                 <img src={c.imgsrc}></img>
-                <span className="profile-num">{c.num}</span>
               </div>
 
               <span className="tag profile-role">{c.role}</span>
@@ -76,17 +73,17 @@ export default function CandidateProfiles({ onViewProfile }) {
 
               <blockquote className="profile-quote">“{c.quote}”</blockquote>
 
-              {c.num === '01' ? (
+              {c.num === "01" ? (
                 <button
                   className="btn btn-outline on-dark profile-btn"
-                  onClick={() => onViewProfile && onViewProfile('husein')}
+                  onClick={() => onViewProfile && onViewProfile("husein")}
                 >
                   Lihat Profil Lengkap <span className="btn-icon">→</span>
                 </button>
               ) : (
                 <button
                   className="btn btn-outline on-dark profile-btn"
-                  onClick={() => onViewProfile && onViewProfile('tomi')}
+                  onClick={() => onViewProfile && onViewProfile("tomi")}
                 >
                   Lihat Profil Lengkap <span className="btn-icon">→</span>
                 </button>

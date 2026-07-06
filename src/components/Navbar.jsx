@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 
 const LINKS = [
+  { href: "#nomor-urut", label: "SINTESA" },
   { href: "#profil", label: "Profil" },
   { href: "#filosofi", label: "Filosofi" },
   { href: "#visi", label: "Visi" },
