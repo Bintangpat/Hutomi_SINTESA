@@ -74,8 +74,8 @@
     background: linear-gradient(
         180deg,
         var(--white) 0%,
-        var(--white) 10%,
-        var(--red) 85%,
+        var(--white) 50%,
+        var(--red) 50%,
         var(--red) 100%
     );
     -webkit-background-clip: text;
