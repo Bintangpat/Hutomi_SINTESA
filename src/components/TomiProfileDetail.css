@@ -1,0 +1,476 @@
+/* ============================================================
+   TomiProfileDetail.css — BEM UAP 2026
+   Tone: Red accent on Navy dark background
+   ============================================================ */
+
+.tomi-detail-page {
+    background: var(--navy);
+    color: var(--white);
+    padding: clamp(100px, 12vw, 140px) var(--edge) clamp(64px, 8vw, 128px);
+    min-height: 100vh;
+}
+
+/* ---- Back Button (shared with Husein, re-declared for self-containment) ---- */
+.tomi-detail-page .btn-back {
+    background: none;
+    border: 1px solid var(--line-on-navy);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    margin-bottom: 48px;
+}
+
+.tomi-detail-page .btn-back:hover {
+    border-color: var(--red);
+    color: var(--white);
+    background: rgba(226, 36, 27, 0.1);
+    transform: translateX(-4px);
+}
+
+/* ---- Hero Layout ---- */
+.tomi-detail-page .profile-detail-hero {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 56px;
+    align-items: start;
+    border-bottom: 1px solid var(--line-on-navy);
+    padding-bottom: 56px;
+    margin-bottom: 56px;
+}
+
+.tomi-detail-page .profile-detail-visual-wrapper {
+    justify-self: center;
+}
+
+.tomi-detail-page .profile-detail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.tomi-detail-page .profile-detail-visual {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: var(--navy-2);
+    border: 1.5px solid var(--line-on-navy);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Red top bar for Tomi */
+.tomi-detail-page .profile-detail-visual.tone-red::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--red), transparent);
+}
+
+.tomi-detail-page .profile-detail-svg {
+    width: 100%;
+    height: 100%;
+    color: var(--red);
+}
+
+.tomi-num {
+    position: absolute;
+    bottom: -12px;
+    right: -12px;
+    font-family: var(--font-display);
+    font-size: 20px;
+    color: var(--white);
+    background: var(--red);
+    border: 1.5px solid var(--red-dark);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tomi-role {
+    display: inline-block;
+    color: #ff8a83;
+    border-color: rgba(226, 36, 27, 0.45);
+    background: rgba(226, 36, 27, 0.1);
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.tomi-detail-page .profile-detail-name {
+    font-size: clamp(36px, 5vw, 64px);
+    color: var(--white);
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+}
+
+.tomi-detail-page .profile-detail-bio {
+    margin-top: 24px;
+    font-size: clamp(15px, 1.8vw, 17px);
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 72ch;
+}
+
+/* ---- Contact Grid ---- */
+.tomi-detail-page .profile-contact-grid {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.tomi-detail-page .contact-item {
+    background: var(--navy-2);
+    border: 1px solid var(--line-on-navy);
+    padding: 16px 20px;
+    border-radius: 4px;
+    transition: border-color 0.25s ease;
+}
+
+.tomi-detail-page .contact-item:hover {
+    border-color: rgba(226, 36, 27, 0.4);
+}
+
+.tomi-detail-page .contact-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+}
+
+.tomi-detail-page .contact-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    word-break: break-all;
+}
+
+.tomi-detail-page .contact-value a {
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.tomi-detail-page .contact-value a:hover {
+    border-bottom-color: var(--red);
+    color: #ff8a83;
+}
+
+/* ---- Content Grid ---- */
+.tomi-detail-page .profile-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+}
+
+.tomi-detail-page .detail-section {
+    margin-bottom: 56px;
+}
+
+.tomi-title {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 2.8vw, 28px);
+    letter-spacing: 0.04em;
+    color: var(--white);
+    border-bottom: 1.5px solid var(--line-on-navy);
+    padding-bottom: 12px;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.tomi-title::after {
+    content: "";
+    position: absolute;
+    bottom: -1.5px;
+    left: 0;
+    width: 60px;
+    height: 1.5px;
+    background: var(--red);
+}
+
+/* ---- Education List ---- */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 28px;
+}
+
+.education-list::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    bottom: 8px;
+    width: 1.5px;
+    background: var(--line-on-navy);
+}
+
+.edu-card-item {
+    position: relative;
+    padding-bottom: 28px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.edu-card-item:last-child {
+    padding-bottom: 0;
+}
+
+.edu-card-dot {
+    position: absolute;
+    left: -28px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background: var(--navy);
+    border: 2px solid var(--red);
+    border-radius: 50%;
+    transform: translateX(-4px);
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+}
+
+.edu-card-item:hover .edu-card-dot {
+    background: var(--red);
+}
+
+.edu-card-body {
+    flex-grow: 1;
+}
+
+.edu-level {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.edu-name {
+    margin-top: 6px;
+    font-size: 18px;
+    color: var(--white);
+    line-height: 1.3;
+}
+
+.edu-location {
+    margin-top: 4px;
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---- Skills ---- */
+.tomi-detail-page .skills-group {
+    margin-bottom: 24px;
+}
+
+.tomi-detail-page .skills-group:last-child {
+    margin-bottom: 0;
+}
+
+.tomi-detail-page .skills-group-title {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 12px;
+}
+
+.tomi-detail-page .skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag-tomi {
+    font-size: 12.5px;
+    padding: 6px 12px;
+    background: var(--navy-3);
+    border: 1px solid var(--line-on-navy);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.85);
+    transition: all 0.25s ease;
+}
+
+.skill-tag-tomi:hover {
+    border-color: var(--red);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.skill-tag-tomi.accent {
+    background: rgba(226, 36, 27, 0.06);
+    border-color: rgba(226, 36, 27, 0.25);
+    color: #ff8a83;
+}
+
+.skill-tag-tomi.accent:hover {
+    background: rgba(226, 36, 27, 0.14);
+    border-color: var(--red);
+}
+
+/* ---- Timeline (Org Experience) ---- */
+.tomi-timeline {
+    position: relative;
+    padding-left: 24px;
+}
+
+.tomi-timeline::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    bottom: 0;
+    width: 1.5px;
+    background: var(--line-on-navy);
+}
+
+.tomi-detail-page .timeline-item {
+    position: relative;
+    margin-bottom: 36px;
+}
+
+.tomi-detail-page .timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.tomi-detail-page .timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -24px;
+    width: 9px;
+    height: 9px;
+    background: var(--navy);
+    border: 2px solid var(--red);
+    border-radius: 50%;
+    transform: translateX(-3.5px);
+    transition: background 0.3s ease;
+}
+
+.tomi-detail-page .timeline-item:hover::before {
+    background: var(--red);
+}
+
+.tomi-detail-page .timeline-date {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: rgba(255, 255, 255, 0.4);
+    background: rgba(226, 36, 27, 0.08);
+    border: 1px solid rgba(226, 36, 27, 0.2);
+    padding: 2px 8px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.tomi-detail-page .timeline-title {
+    margin-top: 8px;
+    font-size: 18px;
+    color: var(--white);
+    line-height: 1.3;
+}
+
+.tomi-subtitle {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #ff8a83;
+    margin-top: 4px;
+}
+
+.tomi-detail-page .timeline-desc {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* ---- Vision Card ---- */
+.tomi-vision-card {
+    background: var(--navy-2);
+    border: 1px solid rgba(226, 36, 27, 0.3);
+    border-radius: 6px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tomi-vision-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--red), var(--red-dark));
+}
+
+.tomi-big-quote {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.7;
+    color: var(--white);
+    margin: 0 0 20px;
+    padding: 0;
+    border: none;
+}
+
+.vision-sub {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 960px) {
+    .tomi-detail-page .profile-detail-hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .tomi-detail-page .profile-detail-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tomi-detail-page .profile-contact-grid {
+        width: 100%;
+    }
+
+    .tomi-detail-page .profile-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

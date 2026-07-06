@@ -15,6 +15,7 @@ const CANDIDATES = [
       "Ketua Satgas Anti-Narkoba UAP (2023-2024)",
       "Mahasiswa Berprestasi Utama UAP & Finalis PILMAPRES 2025",
       "Verified Writer IDN Times (500+ Artikel Terpublikasi)",
+      "Mahasiswa Berprestasi Utama (Mawapres Utama) Universitas Aisyah Pringsewu",
     ],
   },
   {
@@ -23,13 +24,13 @@ const CANDIDATES = [
     name: "Tomi Syahirza",
     tone: "red",
     imgsrc: "/WhatsApp Image 2026-07-05 at 19.05.35.jpeg",
-    desc: "[Fakultas / Jurusan] · Angkatan [____]. Melengkapi Husein dari sisi eksekusi — fokus pada tata kelola internal, manajemen program, dan memastikan setiap gagasan besar benar-benar berjalan di lapangan.",
+    desc: 'S1 Farmasi · Universitas Aisyah Pringsewu. Sosok eksekutor yang tegas — Ketua Umum Himpunan Mahasiswa Farmasi, Koordinator FKPMB, dan pengawal proses demokrasi kampus yang berpengalaman.',
     quote:
       "Gagasan sebesar apa pun akan berhenti jadi wacana kalau tata kelolanya rapuh — tugas kami adalah memastikan setiap janji punya jalan untuk ditepati.",
     tracks: [
-      "Lengkapi riwayat organisasi",
-      "Lengkapi pencapaian akademik/organisasi",
-      "Lengkapi pengalaman manajerial",
+      'Ketua Umum Himpunan Mahasiswa Farmasi (Himafa)',
+      'Ketua Divisi Edukasi UKM Satgas Narkoba UAP',
+      'Sekretaris Bawaslu Mahasiswa Pemilu BEM UAP',
     ],
   },
 ];
@@ -75,20 +76,19 @@ export default function CandidateProfiles({ onViewProfile }) {
 
               <blockquote className="profile-quote">“{c.quote}”</blockquote>
 
-              {c.num === "01" ? (
+              {c.num === '01' ? (
                 <button
                   className="btn btn-outline on-dark profile-btn"
-                  onClick={() => onViewProfile && onViewProfile("husein")}
+                  onClick={() => onViewProfile && onViewProfile('husein')}
                 >
                   Lihat Profil Lengkap <span className="btn-icon">→</span>
                 </button>
               ) : (
                 <button
                   className="btn btn-outline on-dark profile-btn"
-                  disabled
-                  title="Profil Wakil Presiden segera hadir"
+                  onClick={() => onViewProfile && onViewProfile('tomi')}
                 >
-                  Profil Lengkap Segera Hadir
+                  Lihat Profil Lengkap <span className="btn-icon">→</span>
                 </button>
               )}
             </Reveal>

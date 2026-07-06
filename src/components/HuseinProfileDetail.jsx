@@ -20,7 +20,10 @@ export default function HuseinProfileDetail({ onBack }) {
         <div className="profile-detail-hero">
           <Reveal variant="left" className="profile-detail-visual-wrapper">
             <div className="profile-detail-visual tone-navy">
-              <img src="WhatsApp Image 2026-07-05 at 19.05.12.jpeg"></img>
+              <img
+                src="WhatsApp Image 2026-07-05 at 19.05.12.jpeg"
+                className="husein-detail-img"
+              ></img>
               <span className="profile-detail-num">01</span>
             </div>
           </Reveal>

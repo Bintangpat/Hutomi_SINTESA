@@ -10,14 +10,18 @@ import Gallery from './components/Gallery.jsx'
 import ClosingCTA from './components/ClosingCTA.jsx'
 import Footer from './components/Footer.jsx'
 import HuseinProfileDetail from './components/HuseinProfileDetail.jsx'
+import TomiProfileDetail from './components/TomiProfileDetail.jsx'
 
 export default function App() {
-  const [view, setView] = useState('landing') // 'landing' | 'profile-husein'
+  const [view, setView] = useState('landing') // 'landing' | 'profile-husein' | 'profile-tomi'
 
   useEffect(() => {
     const handleHashChange = () => {
       if (window.location.hash === '#/profile/husein') {
         setView('profile-husein')
+        window.scrollTo({ top: 0, behavior: 'instant' })
+      } else if (window.location.hash === '#/profile/tomi') {
+        setView('profile-tomi')
         window.scrollTo({ top: 0, behavior: 'instant' })
       } else {
         setView('landing')
@@ -34,6 +38,8 @@ export default function App() {
   const handleViewProfile = (id) => {
     if (id === 'husein') {
       window.location.hash = '#/profile/husein'
+    } else if (id === 'tomi') {
+      window.location.hash = '#/profile/tomi'
     }
   }
 
@@ -45,6 +51,15 @@ export default function App() {
     return (
       <>
         <HuseinProfileDetail onBack={handleBackToLanding} />
+        <Footer />
+      </>
+    )
+  }
+
+  if (view === 'profile-tomi') {
+    return (
+      <>
+        <TomiProfileDetail onBack={handleBackToLanding} />
         <Footer />
       </>
     )
