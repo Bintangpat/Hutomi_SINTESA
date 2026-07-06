@@ -14,7 +14,7 @@ const CANDIDATES = [
       "Ketua Satgas Anti-Narkoba UAP (2023-2024)",
       "Mahasiswa Berprestasi Utama UAP & Finalis PILMAPRES 2025",
       "Verified Writer IDN Times (500+ Artikel Terpublikasi)",
-      "Mahasiswa Berprestasi Utama (Mawapres Utama) Universitas Aisyah Pringsewu",
+      "Juara 1 Business Plan Competition Pekan HIMAKOM UMJ",
     ],
   },
   {
