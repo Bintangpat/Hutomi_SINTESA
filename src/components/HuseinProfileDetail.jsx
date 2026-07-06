@@ -1,5 +1,6 @@
 import Reveal from "./Reveal.jsx";
 import "./HuseinProfileDetail.css";
+import { link } from "framer-motion/client";
 
 export default function HuseinProfileDetail({ onBack }) {
   return (
@@ -268,11 +269,13 @@ export default function HuseinProfileDetail({ onBack }) {
                     title:
                       '"Carbon Emission Disclosure: Viewed from the Perspectives of Accounting, Market, and Environmental Performance in Highly Polluting Companies in Indonesia"',
                     desc: "Studi mendalam mengenai transparansi emisi karbon dilihat dari kinerja pasar, akuntansi, dan lingkungan.",
+                    link: "https://jaa.unram.ac.id/index.php/jaa/article/view/699#:~:text=This%20study%20examines%20the%20determinants%20of%20carbon%20emission,environmental%20performance%20%28PROPER%29%20into%20a%20multidimensional%20analytical%20model",
                   },
                   {
                     title:
                       '"Bibliometric Analysis of Sustainability Innovation and Research Trends"',
                     desc: "Analisis tren penelitian global mengenai inovasi keberlanjutan menggunakan pendekatan bibliometrik.",
+                    link: "https://www.bing.com/ck/a?!&&p=b32532f96c849ea985b2e60810a7ad02bb877a4ffb970ec56daa52a68bb21b8fJmltdHM9MTc4MzI5NjAwMA&ptn=3&ver=2&hsh=4&fclid=29468f36-7e67-6023-1cc0-995c7f3d6110&psq=Bibliometric+Analysis+of+Sustainability+Innovation+and+Research+Trends&u=a1aHR0cHM6Ly9qb3VybmFsLmFpc3lhaHVuaXZlcnNpdHkuYWMuaWQvaW5kZXgucGhwL0pBQS9hcnRpY2xlL3ZpZXcvMTk0Mw",
                   },
                   {
                     title:
@@ -283,15 +286,22 @@ export default function HuseinProfileDetail({ onBack }) {
                     title:
                       '"Efektivitas Mekanisme Psikologis Dalam Komunikasi Bisnis Terhadap Iklan Media Massa CSR Sebagai Komitmen Perusahaan"',
                     desc: "Analisis psikologis efektivitas iklan CSR dalam membentuk reputasi positif korporasi.",
+                    link: "https://journal.aisyahuniversity.ac.id/index.php/JAA/article/view/1832",
                   },
                 ].map((pub, idx) => (
-                  <div key={idx} className="publication-card">
+                  <a
+                    key={idx}
+                    href={pub.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="publication-card"
+                  >
                     <span className="pub-icon">📄</span>
                     <div className="pub-content">
                       <h4 className="pub-title">{pub.title}</h4>
                       <p className="pub-desc">{pub.desc}</p>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </Reveal>
