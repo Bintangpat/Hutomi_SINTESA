@@ -32,7 +32,9 @@ export default function NomorUrut() {
           <div className="nomor-brand-badge">
             <span className="brand-badge-num">02</span>
           </div>
-          <h2 className="nomor-brand-name">SINTESA</h2>
+          <h2 className="nomor-brand-name">
+            SIN<span className="nomor-brand-name-red">TESA</span>
+          </h2>
           <p className="nomor-brand-tagline">
             <em>Sinergi Nyata untuk Semua</em>
           </p>

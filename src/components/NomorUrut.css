@@ -139,7 +139,7 @@
 }
 
 /* Highlight first letter */
-.nomor-brand-name::first-letter {
+.nomor-brand-name .nomor-brand-name-red {
     color: var(--red);
 }
 
