@@ -7,9 +7,13 @@ const CANDIDATES = [
     role: 'Calon Presiden BEM',
     name: 'Husein Fadhilah',
     tone: 'navy',
-    desc: '[Fakultas / Jurusan] · Angkatan [____]. Dikenal dengan gaya kepemimpinan yang reflektif namun tegas — lebih senang mendengarkan akar rumput dahulu sebelum mengambil sikap, dan konsisten menolak kompromi pada nilai.',
+    desc: 'S1 Akuntansi · Angkatan 2023. Dikenal dengan gaya kepemimpinan yang reflektif namun tegas — lebih senang mendengarkan akar rumput dahulu sebelum mengambil sikap, dan konsisten menolak kompromi pada nilai.',
     quote: 'Kita tidak sedang membangun organisasi untuk merawat rutinitas, kita sedang mewariskan peradaban pergerakan yang menolak tunduk pada keadaan.',
-    tracks: ['Lengkapi riwayat organisasi', 'Lengkapi pencapaian akademik/organisasi', 'Lengkapi pengalaman advokasi'],
+    tracks: [
+      'Ketua Satgas Anti-Narkoba UAP (2023-2024)',
+      'Mahasiswa Berprestasi Utama UAP & Finalis PILMAPRES 2025',
+      'Verified Writer IDN Times (500+ Artikel Terpublikasi)'
+    ],
   },
   {
     num: '02',
@@ -22,7 +26,7 @@ const CANDIDATES = [
   },
 ]
 
-export default function CandidateProfiles() {
+export default function CandidateProfiles({ onViewProfile }) {
   return (
     <section id="profil" className="section profiles">
       <div className="container">
@@ -67,6 +71,23 @@ export default function CandidateProfiles() {
               <blockquote className="profile-quote">
                 “{c.quote}”
               </blockquote>
+
+              {c.num === '01' ? (
+                <button
+                  className="btn btn-outline on-dark profile-btn"
+                  onClick={() => onViewProfile && onViewProfile('husein')}
+                >
+                  Lihat Profil Lengkap <span className="btn-icon">→</span>
+                </button>
+              ) : (
+                <button
+                  className="btn btn-outline on-dark profile-btn"
+                  disabled
+                  title="Profil Wakil Presiden segera hadir"
+                >
+                  Profil Lengkap Segera Hadir
+                </button>
+              )}
             </Reveal>
           ))}
         </div>
@@ -74,3 +95,4 @@ export default function CandidateProfiles() {
     </section>
   )
 }
+

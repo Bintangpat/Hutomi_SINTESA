@@ -116,6 +116,27 @@
   color: var(--white);
 }
 
+.profile-btn {
+  margin-top: 28px;
+  width: 100%;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.profile-btn:hover:not(:disabled) {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.profile-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.08);
+  background: transparent;
+}
+
 @media (max-width: 860px) {
   .profile-grid { grid-template-columns: 1fr; }
 }
