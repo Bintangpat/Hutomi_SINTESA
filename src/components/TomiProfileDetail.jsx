@@ -25,7 +25,6 @@ export default function TomiProfileDetail({ onBack }) {
                 alt="Tomi Syahirza"
                 className="profile-detail-img"
               />
-              <span className="profile-detail-num tomi-num">02</span>
             </div>
           </Reveal>
 

@@ -24,7 +24,6 @@ export default function HuseinProfileDetail({ onBack }) {
                 src="WhatsApp Image 2026-07-05 at 19.05.12.jpeg"
                 className="husein-detail-img"
               ></img>
-              <span className="profile-detail-num">01</span>
             </div>
           </Reveal>
 
