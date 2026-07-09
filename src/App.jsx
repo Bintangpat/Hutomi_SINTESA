@@ -12,7 +12,7 @@ import Footer from './components/Footer.jsx'
 import HuseinProfileDetail from './components/HuseinProfileDetail.jsx'
 import TomiProfileDetail from './components/TomiProfileDetail.jsx'
 import NomorUrut from './components/NomorUrut.jsx'
-import { Analytics } from "@vercel/analytics"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function App() {
   const [view, setView] = useState('landing') // 'landing' | 'profile-husein' | 'profile-tomi'
